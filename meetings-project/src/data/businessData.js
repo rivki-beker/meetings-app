@@ -10,7 +10,7 @@ class BusinessData {
         logo: "https://www.galyam-studio.co.il/wp-content/uploads/2022/07/bar_nur_logo_1.jpg",
         description: "The law office that will make you a winner in any law",
     };
-    baseUrl = 'http://localhost:8787/businessData';
+    baseUrl = `${import.meta.env.VITE_API_URL}/businessData`;
     constructor() {
         makeObservable(this, {
             business: observable,

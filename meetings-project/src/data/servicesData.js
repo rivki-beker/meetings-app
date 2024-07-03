@@ -5,7 +5,7 @@ class ServicesData {
 
   services = [];
 
-  baseUrl = 'http://localhost:8787/service';
+  baseUrl = `${import.meta.env.VITE_API_URL}/service`;
   constructor() {
     makeObservable(this, {
       services: observable,

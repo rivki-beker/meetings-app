@@ -5,7 +5,7 @@ class MeetingsData {
 
   meetings = [];
 
-  baseUrl = 'http://localhost:8787/appointment';
+  baseUrl = `${import.meta.env.VITE_API_URL}/appointment`;
   constructor() {
     makeObservable(this, {
       meetings: observable,
