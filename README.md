@@ -84,18 +84,6 @@ The client-side application allows users to interact with business data and sche
 - **Service List**: View available services.
 - **Appointment Scheduling**: Select a service, provide personal details, and book an appointment with real-time availability checks.
 
-### Key Files
-
-- **App.jsx**: Main component handling routing.
-- **Home.jsx**: Customer interface.
-- **AddMeeting.jsx**: Form for booking appointments.
-- **AdminHome.jsx**: Admin interface.
-- **BusinessDetails.jsx**: Component for business details.
-- **ServicesList.jsx**: Component for services.
-- **businessData.js**: Business information.
-- **meetingsData.js**: Meeting data operations.
-- **servicesData.js**: Service management.
-
 ## Installation
 
 1. **Clone the repository**:
