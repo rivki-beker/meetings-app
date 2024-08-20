@@ -33,13 +33,14 @@ The backend handles API requests related to business data and appointments.
 
 ### API Endpoints
 
-- `POST /login` - Authenticate a user.
-- `GET /business` - Get business details.
-- `POST /business` - Update business details.
-- `GET /services` - Retrieve services.
-- `POST /services` - Add a new service.
-- `GET /appointments` - Retrieve appointments.
-- `POST /appointments` - Schedule a new appointment.
+- `POST /login` - Authenticate a user with `name` and `password`. Returns `200` for valid credentials (`name: "admin"`, `password: "123456"`), otherwise returns `401`.
+- `POST /appointment` - Add a new appointment. Checks for appointment availability. Returns `200` if successful, otherwise returns `400` if the time is not available.
+- `GET /appointments` - Retrieve a list of all scheduled appointments.
+- `POST /service` - Add a new service. Returns `200` if successful, otherwise returns `400` if the service already exists.
+- `GET /services` - Retrieve a list of all services.
+- `POST /businessData` - Add or update business details. Returns the updated business data.
+- `PUT /businessData` - Update business details. Returns the updated business data.
+- `GET /businessData` - Retrieve business details.
 
 ## Frontend (React + Vite)
 
@@ -85,15 +86,39 @@ The client-side application allows users to interact with business data and sche
 
 ### Key Files
 
-- **App.jsx**: The main component handling routing.
-- **Home.jsx**: The main user interface for customers.
-- **AddMeeting.jsx**: A form for customers to book appointments.
-- **AdminHome.jsx**: The main interface for business owners.
-- **BusinessDetails.jsx**: Component for displaying and editing business details.
-- **ServicesList.jsx**: A component that lists available services.
-- **businessData.js**: Stores business information.
-- **meetingsData.js**: Handles meeting-related data operations.
-- **servicesData.js**: Manages the list of services.
+- **App.jsx**: Main component handling routing.
+- **Home.jsx**: Customer interface.
+- **AddMeeting.jsx**: Form for booking appointments.
+- **AdminHome.jsx**: Admin interface.
+- **BusinessDetails.jsx**: Component for business details.
+- **ServicesList.jsx**: Component for services.
+- **businessData.js**: Business information.
+- **meetingsData.js**: Meeting data operations.
+- **servicesData.js**: Service management.
+
+## Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/project-repo.git
+   cd project-repo
+   ```
+
+2. **Install dependencies for both frontend and backend**:
+   ```bash
+   cd reactProjectServer
+   npm install
+   cd ../meetings-project
+   npm install
+   ```
+
+3. **Run the project**:
+    ```bash
+    cd ../reactProjectServer
+    npm start
+    cd ../meetings-project
+    npm run dev
+    ```
 
 ## Usage
 
