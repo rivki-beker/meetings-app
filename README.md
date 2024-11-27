@@ -88,8 +88,8 @@ The client-side application allows users to interact with business data and sche
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/project-repo.git
-   cd project-repo
+   git clone https://github.com/rivki-beker/meetings-app
+   cd meetings-app
    ```
 
 2. **Install dependencies for both frontend and backend**:
